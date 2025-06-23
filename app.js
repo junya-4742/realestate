@@ -1,8 +1,8 @@
 const fv = document.querySelector('.fv');
 const images = [
-  '/images/FirstView01.png',
-  '/images/FirstView02.png',
-  '/images/FirstView03.png',
+  './images/FirstView01.png',
+  './images/FirstView02.png',
+  './images/FirstView03.png',
 ];
 let index = 0;
 
