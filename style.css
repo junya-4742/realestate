@@ -232,7 +232,7 @@ select {
 
 .about {
   height: 500px;
-  background-image: url(/images/About.png);
+  background-image: url(./images/About.png);
   background-size: cover;
   background-position: center;
   position: relative;
