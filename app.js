@@ -15,18 +15,11 @@ setInterval(changeBackground, 5000);
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
 
-  hamburger.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
+  menuToggle.addEventListener('click', function () {
+    menuToggle.classList.toggle('active'); // 三⇄× 切り替え
+    navMenu.classList.toggle('active');    // メニュー表示切り替え
   });
-});
-
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  navMenu.classList.toggle('active');
 });
