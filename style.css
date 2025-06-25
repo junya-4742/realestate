@@ -165,8 +165,6 @@ select {
 }
 
 @media screen and (max-width: 1000px) {
-
-
   .nav-container .nav-menu {
     display: none;
   }
@@ -235,15 +233,12 @@ select {
   flex-direction: column;
 }
 
-
 .fv-copy {
   flex: 1;
-  /* 残りのスペース全部使う */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  /* オーバーレイより上に */
   font-size: 40px;
 }
 
@@ -277,10 +272,6 @@ select {
 .about-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  /* position: absolute;
-  top: 50%;
-  left: 40%; */
-  /* transform: translate(-50%, -50%); */
   color: #000000;
   font-size: 18px;
   line-height: 2.5;
@@ -479,7 +470,6 @@ select {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* 4列 */
   gap: 40px;
   text-align: left;
 }
@@ -627,7 +617,6 @@ select {
     display: flex;
     width: 100%;
     max-width: 600px;
-    /* margin: 0 auto; */
     text-align: center;
   }
 
@@ -681,9 +670,7 @@ select {
 
 .form-gender input[type="radio"] {
   transform: scale(1.5);
-  /* ラジオボタンの大きさ調整 */
   margin-right: 20px;
-  /* ラジオボタンと「男性」の間隔 */
   cursor: pointer;
 }
 
@@ -707,16 +694,12 @@ select {
 .radio-container {
   display: flex;
   flex-wrap: wrap;
-  /* 折り返しを許可 */
   max-width: 100%;
-  /* コンテンツ幅に合わせる */
 }
 
 .form-check label {
   flex: 1;
-  /* 残りを占有 */
   font-size: 16px;
-  /* 適宜調整 */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -916,6 +899,7 @@ hr {
   padding-top: 20px;
 }
 
+/* モーダル画像 */
 .modal-container img {
   width: 420px;
   height: 220px;
