@@ -19,18 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.getElementById('nav-menu');
 
   menuToggle.addEventListener('click', function () {
-    menuToggle.classList.toggle('active'); // 三⇄× 切り替え
-    navMenu.classList.toggle('active');    // メニュー表示切り替え
+    menuToggle.classList.toggle('active'); 
+    navMenu.classList.toggle('active');    
   });
 });
 
-// モダール
+// モーダル
 document.addEventListener('DOMContentLoaded', function() {
   const images = document.querySelectorAll('.grid .item img');
 
   images.forEach(function(img) {
     img.addEventListener('click', function() {
-      // --- 背景白オーバーレイ作成 ---
+      
       const overlay = document.createElement('div');
       overlay.classList.add('white-background');
 
