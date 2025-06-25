@@ -74,13 +74,11 @@ select {
 
 .nav-container h1 {
   font-size: 20px;
-  /* margin-right: 111px; */
 }
 
 .nav-container ul {
   display: flex;
   gap: 30px;
-  /* メニューの間隔 */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -231,7 +229,6 @@ select {
   background-repeat: no-repeat;
   transition: background-image 1s ease-in-out;
   height: 800px;
-  /* FVの高さ */
   position: relative;
   color: white;
   display: flex;
@@ -250,31 +247,48 @@ select {
   font-size: 40px;
 }
 
+.br-sp {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .fv-copy {
+    font-size: 30px;
+  }
+
+  .br-sp {
+    display: inline;
+  }
+
+}
+
+/* アバウト */
 .about {
-  height: 500px;
+  padding: 110px 0;
   background-image: url(./images/About.png);
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-text {
   writing-mode: vertical-rl;
-  /* 縦書き（右→左） */
   text-orientation: upright;
-  /* 文字の正立 */
-  position: absolute;
-  /* 位置を自由に調整 */
+  /* position: absolute;
   top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  /* 中央寄せ */
+  left: 40%; */
+  /* transform: translate(-50%, -50%); */
   color: #000000;
   font-size: 18px;
   line-height: 2.5;
   z-index: 1;
   letter-spacing: 5px;
   white-space: nowrap;
+  display: flex;
+  flex-direction: column
 }
 
 .about-text h1 {
@@ -283,6 +297,22 @@ select {
   margin-right: 30px;
 }
 
+@media screen and (max-width: 1000px) {
+  .about-text {
+    flex-direction: row;
+  }
+
+  .about-text h1 {
+    margin: 24px auto;
+  }
+
+  .about {
+    background-size: cover;
+    background-position: right;
+  }
+}
+
+/* サービス */
 .service {
   background-color: rgba(77, 150, 0, 0.12);
   padding: 80px;
@@ -381,6 +411,67 @@ select {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .service {
+    padding: 50px 30px;
+  }
+
+  .title p {
+    margin-bottom: 38px;
+  }
+
+  .service-item01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .service-item02 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .photo-box01,.photo-box02 {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .photo-box01 img,.photo-box02 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .photo-box01 p,.photo-box02 p {
+    display: block;
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .des-box01,.des-box02 {
+    margin: 0;
+    margin-top: 6px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .des-box01 h2,.des-box02 h2{
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .des-box01 p,.des-box02 p{
+    font-size: 16px;
+    margin: 0;
+    line-height: 25px;
+  }
+}
+
+/* ワークス */
 .works {
   padding: 80px;
 }
@@ -396,6 +487,7 @@ select {
 .item img {
   width: 200px;
   height: 200px;
+  cursor: pointer;
 }
 
 .item p {
@@ -403,6 +495,29 @@ select {
   font-size: 14px;
 }
 
+@media screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .item {
+    text-align: center;
+  }
+
+  .item img {
+    width: 100%;
+    max-width: 315px;
+    height: auto; 
+    margin: 0 auto;
+  }
+
+  .works {
+    padding: 40px 20px; 
+  }
+}
+
+/* お知らせ */
 .news {
   background-color: rgba(77, 150, 0, 0.12);
   padding: 80px;
@@ -457,21 +572,22 @@ select {
 
 }
 
+/* 会社概要 */
 .company {
   padding: 80px;
 }
 
-.campany-box {
+.company-box {
   display: flex;
   position: relative;
   justify-content: space-between;
 }
 
-.campany-map {
+.company-map {
   z-index: 2;
 }
 
-.campany-add {
+.company-add {
   background-color: #4D9600;
   color: #ffffff;
   margin-top: 200px;
@@ -481,22 +597,46 @@ select {
   z-index: 1;
 }
 
-.campany-add h2 {
+.company-add h2 {
   margin-top: 49px;
 }
 
-.campany-add .add {
+.company-add .add {
   line-height: 25px;
   margin-top: 7px;
 }
 
-.campany-add .tel {
+.company-add .tel {
   margin-top: 12px;
 }
 
-.campany-add .mail {
+.company-add .mail {
   margin-top: 19px;
   margin-bottom: 42px;
+}
+
+@media screen and (max-width: 1000px) {
+  .company-box {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .company-map {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    /* margin: 0 auto; */
+    text-align: center;
+  }
+
+  .company-add{
+    max-width: 600px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px 0 0 0;
+  }
 }
 
 .contact {
@@ -631,6 +771,41 @@ form button {
   margin: 80px auto 0;
 }
 
+@media screen and (max-width: 1000px) {
+
+  .contact{
+    padding: 50px 30px;
+  }
+
+  .form-name,
+  .form-mail,
+  .form-type{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 auto;
+  }
+
+  .form-name label,
+  .form-mail label,
+  .form-type label{
+    margin-top: 40px;
+  }
+
+  .form-name input,
+  .form-mail input,
+  .form-type select,
+  .form-msg input{
+    width: 100%;
+  }
+
+  .form-gender p{
+    margin: 0;
+  }
+  
+
+}
+
 form button:hover {
   background-color: #ffffff;
   color: #4D9600;
@@ -638,6 +813,7 @@ form button:hover {
   cursor: pointer;
 }
 
+/* フッター */
 .footer-container {
   padding: 80px;
   display: flex;
@@ -693,4 +869,58 @@ hr {
   font-size: 40px;
   z-index: 1000;
   font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .footer-container{
+    padding: 50px 35px;
+  }
+
+  .footer-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .back-to-top{
+    right: 20px;
+    bottom: 60px;
+  }
+
+}
+
+/* モーダル */
+/* モーダル背景 */
+.white-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.502);
+  opacity: 1;
+  z-index: 999;
+}
+
+/* モーダルコンテナ */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 275px;
+  background-color: white;
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+.modal-container img {
+  width: 420px;
+  height: 220px;
+  display: block;
+  margin: auto;
+  padding: 0;
+  border: none;
 }
