@@ -42,10 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const modalImg = document.createElement('img');
       modalImg.src = img.src;
       modalImg.alt = img.alt;
-      modalImg.style.width = "420px";
-      modalImg.style.height = "220px";
+      modalImg.style.width = "300px";
+      modalImg.style.height = "200px";
       modalImg.style.display = "block";
       modalImg.style.margin = "0 auto";
+      modalImg.style.objectFit = "contain";  // または "cover"
+
 
       // --- 対応するpタグの内容をコピー（一列テキスト化）---
       const originalHTML = img.nextElementSibling ? img.nextElementSibling.innerHTML : '';

@@ -291,6 +291,8 @@ select {
 @media screen and (max-width: 1000px) {
   .about-text {
     flex-direction: row;
+    line-height: 2.0;
+    
   }
 
   .about-text h1 {
@@ -300,6 +302,7 @@ select {
   .about {
     background-size: cover;
     background-position: right;
+    
   }
 }
 
@@ -559,6 +562,16 @@ select {
   text-align: right;
   margin-right: 53px;
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+  .news{
+    padding: 50px 30px;
+  }
+
+  .news-list li .date {
+  margin-right: 19px;
+}
 
 }
 
@@ -606,6 +619,10 @@ select {
 }
 
 @media screen and (max-width: 1000px) {
+  .company{
+    padding: 50px 30px;
+  }
+
   .company-box {
     display:flex;
     flex-direction: column;
@@ -786,6 +803,9 @@ form button {
     margin: 0;
   }
   
+  .form-gender{
+    gap: 50px;
+  }
 
 }
 
